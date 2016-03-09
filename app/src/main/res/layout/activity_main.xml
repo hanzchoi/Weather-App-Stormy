@@ -8,10 +8,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="personabe1984.c4q.nyc.weather_app_stormy.MainActivity">
+    tools:context="personabe1984.c4q.nyc.weather_app_stormy.MainActivity"
+    android:background="#fffc970b">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="100"
+        android:id="@+id/temperatureLanbel"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="150sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/degreeImageView"
+        android:layout_alignTop="@+id/temperatureLanbel"
+        android:layout_toEndOf="@+id/temperatureLanbel"
+        android:src="@mipmap/degree"
+        android:layout_marginTop="50dp"/>
 </RelativeLayout>
