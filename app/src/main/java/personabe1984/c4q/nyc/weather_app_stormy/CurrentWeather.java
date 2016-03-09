@@ -1,5 +1,9 @@
 package personabe1984.c4q.nyc.weather_app_stormy;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
 public class CurrentWeather {
 
 
@@ -9,6 +13,16 @@ public class CurrentWeather {
     private double mHumidity;
     private double mPrecipChance;
     private String mSummary;
+
+    public String getTimeZone() {
+        return mTimeZone;
+    }
+
+    public void setTimeZone(String timeZone) {
+        mTimeZone = timeZone;
+    }
+
+    private String mTimeZone;
 
 
 
@@ -22,6 +36,15 @@ public class CurrentWeather {
 
     public long getTime() {
         return mTime;
+    }
+
+    public String getFormattedTime(){
+        SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
+        formatter.setTimeZone(TimeZone.getTimeZone(getTimeZone()));
+        Date dateTime = new Date(getTime() * 1000);
+        String timeString = formatter.format(dateTime);
+
+        return timeString;
     }
 
     public void setTime(long time) {
