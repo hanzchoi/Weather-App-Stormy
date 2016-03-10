@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="100"
-        android:id="@+id/temperatureLanbel"
+        android:id="@+id/temperatureLabel"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
@@ -26,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/degreeImageView"
-        android:layout_alignTop="@+id/temperatureLanbel"
-        android:layout_toEndOf="@+id/temperatureLanbel"
+        android:layout_alignTop="@+id/temperatureLabel"
+        android:layout_toEndOf="@+id/temperatureLabel"
         android:src="@mipmap/degree"
         android:layout_marginTop="50dp"/>
 
@@ -65,7 +65,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/temperatureLanbel"
+        android:layout_below="@+id/temperatureLabel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:id="@+id/linearLayout">
@@ -124,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Stomy with a chance of meatball"
-        android:id="@+id/textView"
+        android:id="@+id/summaryLabel"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
