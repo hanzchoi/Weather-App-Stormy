@@ -1,10 +1,12 @@
-package personabe1984.c4q.nyc.weather_app_stormy;
+package personabe1984.c4q.nyc.weather_app_stormy.weather;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CurrentWeather {
+import personabe1984.c4q.nyc.weather_app_stormy.R;
+
+public class Current {
 
 
     private String mIcon;

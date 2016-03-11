@@ -1,10 +1,12 @@
-package personabe1984.c4q.nyc.weather_app_stormy;
+package personabe1984.c4q.nyc.weather_app_stormy.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import personabe1984.c4q.nyc.weather_app_stormy.R;
 
 public class AlertDialogFragment extends DialogFragment {
 
