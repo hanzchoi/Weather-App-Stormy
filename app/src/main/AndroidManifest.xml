@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".DailyForecastActivity">
+        <activity android:name=".ui.DailyForecastActivity">
         </activity>
     </application>
 
