@@ -54,6 +54,11 @@ public class DayAdapter extends BaseAdapter {
             holder = (ViewHolder)convertView.getTag();
         }
 
+        Day day = mDays[position];
+        holder.iconImageView.setImageResource(day.getIconId());
+        holder.temperatureLabel.setText(day.getTemperatureMax()+"");
+        holder.dayLabel.setText(day.getDayOfTheWeek());
+
         return null;
     }
 
