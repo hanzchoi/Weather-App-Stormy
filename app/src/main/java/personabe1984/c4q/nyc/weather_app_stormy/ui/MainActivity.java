@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -27,7 +28,9 @@ import okhttp3.Request;
 import okhttp3.Response;
 import personabe1984.c4q.nyc.weather_app_stormy.R;
 import personabe1984.c4q.nyc.weather_app_stormy.weather.Current;
+import personabe1984.c4q.nyc.weather_app_stormy.weather.Day;
 import personabe1984.c4q.nyc.weather_app_stormy.weather.Forecast;
+import personabe1984.c4q.nyc.weather_app_stormy.weather.Hour;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -169,8 +172,23 @@ public class MainActivity extends AppCompatActivity {
         Forecast forecast = new Forecast();
 
         forecast.setCurrent(getCurrentDetails(jsonData));
+        forecast.setHourlyForecast(getHourlyForecast(jsonData));
+        forecast.setDailyForecast(getDailyForecast(jsonData));
 
         return forecast;
+
+    }
+
+    private Day[] getDailyForecast(String jsonData) {
+
+
+    }
+
+    private Hour[] getHourlyForecast(String jsonData) throws JSONException{
+        JSONObject forecast = new JSONObject(jsonData);
+        String timezone = forecast.getString("timezone");
+        JSONObject hourly = forecast.getJSONObject("hourly");
+        JSONArray data = hourly.getJSONArray("data");
 
     }
 
