@@ -65,12 +65,14 @@ public class Day implements Parcelable{
         Date dateTime = new Date(mTime * 1000);
         return formatter.format(dateTime);
     }
-
+    //anytime we implement an interface we need to implement the methods of that interface.
+    //we will leave describeContents alone as we dont need it.
     @Override
     public int describeContents() {
         return 0;
     }
 
+    //here we will write the data into the destination parcel...this is the wrapping part.
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeLong(mTime);
@@ -80,6 +82,8 @@ public class Day implements Parcelable{
         dest.writeString(mTimezone);
     }
 
+    //now we need to write the code to unwrap it as well...
+    //to unwrap it we will use a private constructor which takes the parcel object as a parameter.
     private Day(Parcel in){
         mTime = in.readLong();
         mSummary = in.readString();
@@ -89,7 +93,7 @@ public class Day implements Parcelable{
     }
 
     public Day(){
-        
+
     }
 
     public static final Creator<Day> CREATOR = new Creator<Day>() {
